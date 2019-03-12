@@ -10,26 +10,50 @@
   <!-- <link rel="stylesheet" href="/css/style.css"> -->
   <link rel="stylesheet" href="/css/style.css">
   <script>
-    var myApp = angular.module('myApp', ['ngRoute']);
-    myApp.config(function($routeProvider) {
-      $routeProvider
-      .when('/', {
-        // templateUrl: 'partials/custom.html'
-        templateUrl: 'partials/custom.html'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-    });
+  // set route
+    // var myApp = angular.module('myApp', ['ngRoute']);
+    // myApp.config(function($routeProvider) {
+    //   $routeProvider
+    //   .when('/', {
+    //     // templateUrl: 'partials/custom.html'
+    //     templateUrl: 'partials/custom.html'
+    //   })
+    //   .otherwise({
+    //     redirectTo: '/'
+    //   });
+    // });
     // start of name change
+    function tipCalculate(slider, bill){
+      var tip = document.getElementById('tip');
+      var slideval = document.getElementById('slideval');
+      console.log(slideval);
+      var bill = document.getElementById(bill).value;
+      var prcnt = slider * .01;
+      slideval.innerHTML = slider + '%';
+      tip.innerHTML = '$' + (bill * prcnt).toFixed(2);
+      var tipping = (bill * prcnt).toFixed(2);
+      total.innerHTML = parseFloat(bill) + parseFloat(tipping);
+      // the bill, tip were getting concatenated instead of adding. parseFloat forces them to be numbers in JS. (json only takes strings, need to turn them into numbers before using?) 
+    }
 
   </script>
 </head>
 <body ng-app="myApp">
   <div class="container">
-    <div class="row">
-      <!-- "nice" -->
-    </div>
+    <div class="form-group row">
+
+      <h1>Tip Calculator</h1>
+      <h3>Enter the bill amount for your meal:</h3>
+      <div class="form-inline">
+        <label>$</label><input type="number" id="bill" placeholder="Enter your bill"><br>
+      <!-- slider -->
+      <h3>Tip percentage:</h3>
+      <input type="range" min="0" max="100" value="0" step="1" onchange="tipCalculate(this.value,'bill')" style="width:100%">
+      <span id="slideval">0%</span>
+      <h4>Tip to leave:  <span id="tip" class="panel panel-default">  0.00</span></h4>
+      <h3 style="margin-top:7%">Total bill:  <span id="total" class="panel panel-default">  0.00</span></h3>
+</div>
+    
     <div class="row">
       <div class="col-xs-12">
         <div ng-view="">
