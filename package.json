@@ -1,0 +1,7 @@
+{
+  "name": "customusers",
+  "description": "Customizing users",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
