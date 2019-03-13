@@ -1,6 +1,6 @@
 {
-  "name": "customusers",
-  "description": "Customizing users",
+  "name": "Tip Calculator",
+  "description": "Calculator for tipping",
   "dependencies": {
     "express": "^4.13.4"
   }

@@ -3,26 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Tip on Tap</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-route.js"></script>
+  <!-- created without AngularJS -->
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <!-- <link rel="stylesheet" href="/css/style.css"> -->
   <link rel="stylesheet" href="/css/style.css">
   <script>
-  // set route
-    // var myApp = angular.module('myApp', ['ngRoute']);
-    // myApp.config(function($routeProvider) {
-    //   $routeProvider
-    //   .when('/', {
-    //     // templateUrl: 'partials/custom.html'
-    //     templateUrl: 'partials/custom.html'
-    //   })
-    //   .otherwise({
-    //     redirectTo: '/'
-    //   });
-    // });
-    // start of name change
     function tipCalculate(slider, bill){
       var tip = document.getElementById('tip');
       var slideval = document.getElementById('slideval');
@@ -38,7 +23,7 @@
 
   </script>
 </head>
-<body ng-app="myApp">
+<body>
   <div class="container">
     <div class="form-group row">
 
@@ -54,13 +39,6 @@
       <h3 style="margin-top:7%">Total bill:  <span id="total" class="panel panel-default">  0.00</span></h3>
 </div>
     
-    <div class="row">
-      <div class="col-xs-12">
-        <div ng-view="">
-          
-        </div>
-      </div>
-    </div>
   </div>
 </body>
 </html>
