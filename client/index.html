@@ -17,7 +17,7 @@
       slideval.innerHTML = slider + '%';
       tip.innerHTML = '$' + (bill * prcnt).toFixed(2);
       var tipping = (bill * prcnt).toFixed(2);
-      total.innerHTML = parseFloat(bill) + parseFloat(tipping);
+      total.innerHTML = '$' + (parseFloat(bill) + parseFloat(tipping));
       // the bill, tip were getting concatenated instead of adding. parseFloat forces them to be numbers in JS. (json only takes strings, need to turn them into numbers before using?) 
     }
 
