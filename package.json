@@ -1,6 +1,6 @@
 {
-  "name": "Tip Calculator",
-  "description": "Calculator for tipping",
+  "name": "tip-calculator",
+  "description": "calculator for tipping",
   "dependencies": {
     "express": "^4.13.4"
   }
